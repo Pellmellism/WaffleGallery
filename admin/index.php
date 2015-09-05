@@ -47,8 +47,7 @@ $content_src = 'pages/'.$pages[$page];
     <meta charset="utf-8">
     <title>Responsive Nav &middot; Advanced Left Navigation Demo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!--[if lte IE 8]><link rel="stylesheet" href="../../responsive-nav.css"><![endif]-->
-    <!--[if gt IE 8]><!--><link rel="stylesheet" href="admin.css"><!--<![endif]-->
+    <link rel="stylesheet" href="admin.css">
     <script src="admin.js"></script>
   </head>
   <body>
