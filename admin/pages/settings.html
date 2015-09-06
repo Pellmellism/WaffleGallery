@@ -1,1 +1,10 @@
 select different colors, or fonts, themes, sizes, loading styles, hover styles, lightbox styles, etc....
+<hr>
+so i guess im storing global variables as text files now....each variable is its own file in a settings folder, and we should update those files to reflect these settings...
+<hr>
+thumbnail width - 100px<br>
+thumbnail height - 150px<br>
+<br>
+thumbnail size should be uniform for every image, it is an integral part of keeping the grid a grid...the ratio doesnt matter as long as they are all the same.if there is a change here then we should resource a new thumbnail from every images original file to be sure that old thumbnails match new thumbnails. warn the user that this operation may take a while if there are lots of images and in the case of a timeout, well....dont. maybe ajax until a check comes back good? do 10 at a time and check them all until good? redesign thumbnail system?
+<hr>
+let the user change how many grid columns should be displayed at different display width break points. This should update the @media rules in the grids css file. Use pretty pictures, users will thank you later 

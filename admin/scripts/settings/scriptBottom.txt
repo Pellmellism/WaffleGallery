@@ -1,0 +1,2 @@
+hotToaster += '--></div>';//close the toaster up and push it down
+document.getElementById(elem).innerHTML = hotToaster;//Put the toaster on the kitchen counter and plug it in
