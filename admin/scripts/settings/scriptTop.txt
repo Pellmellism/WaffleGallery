@@ -1,6 +1,7 @@
 var scripts = document.getElementsByTagName( 'script' );
 var me = scripts[ scripts.length - 1 ];
 var elem = me.getAttribute( "kitchen" );
-var hotToaster = '<link rel="stylesheet" href="//www.brightideasfl.com/gallery/css/toaster.css" />';//pick the style of the toaster
-hotToaster += '<div class=toaster><!--';//create the toaster
 var currentLocation = window.location.hostname;
+var hotToaster = '<link rel="stylesheet" href="//'+currentLocation+'/gallery/css/toaster.css" />';//pick the style of the toaster
+hotToaster += '<div class=toaster><!--';//create the toaster
+

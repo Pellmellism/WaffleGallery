@@ -6,6 +6,7 @@ $pages = array(
     'tags'      => 'tags.html',
 	'reorder'   => 'reorder.html',
     'captions'  => 'captions.html',
+    'watermark' => 'watermark.html',
     'faq'       => 'faq.html',
     'settings'  => 'settings.html',
     '404'       => '404.html'
@@ -45,7 +46,7 @@ $content_src = 'pages/'.$pages[$page];
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Responsive Nav &middot; Advanced Left Navigation Demo</title>
+    <title>Gallery Dashboard</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="admin.css">
     <script src="admin.js"></script>
@@ -54,13 +55,14 @@ $content_src = 'pages/'.$pages[$page];
 
     <div role="navigation" id="foo" class="nav-collapse">
       <ul>
-        <li class="<?php echo $active[0]; ?>"><a href="<?php echo $urlPath; ?>/home">Home</a></li>
+        <li class="<?php echo $active[0]; ?>"><a href="<?php echo $urlPath; ?>/">Home</a></li>
         <li class="<?php echo $active[1]; ?>"><a href="<?php echo $urlPath; ?>/upload">Upload</a></li>
         <li class="<?php echo $active[2]; ?>"><a href="<?php echo $urlPath; ?>/tags">Tags</a></li>
         <li class="<?php echo $active[3]; ?>"><a href="<?php echo $urlPath; ?>/reorder">Reorder</a></li>
         <li class="<?php echo $active[4]; ?>"><a href="<?php echo $urlPath; ?>/captions">Captions</a></li>
-        <li class="<?php echo $active[5]; ?>"><a href="<?php echo $urlPath; ?>/faq">FAQ</a></li>
-        <li class="<?php echo $active[6]; ?>"><a href="<?php echo $urlPath; ?>/settings">Settings</a></li>
+        <li class="<?php echo $active[5]; ?>"><a href="<?php echo $urlPath; ?>/watermark">Watermark</a></li>
+        <li class="<?php echo $active[6]; ?>"><a href="<?php echo $urlPath; ?>/faq">FAQ</a></li>
+        <li class="<?php echo $active[7]; ?>"><a href="<?php echo $urlPath; ?>/settings">Settings</a></li>
       </ul>
     </div>
 
