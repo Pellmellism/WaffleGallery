@@ -24,6 +24,7 @@ hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/t
 hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14418842805114.jpg"></div><!--'
 hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14419738264304.jpg"></div><!--'
 hotToaster += '--></div>';//close the toaster up and push it down
+
 document.getElementById(elem).innerHTML = hotToaster;//Put the toaster on the kitchen counter and plug it in
     var waffles = document.getElementsByClassName("waffle");
     var waffleDisplayBG = document.getElementById("waffleDisplayBG");

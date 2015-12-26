@@ -27,6 +27,7 @@ if ( array_key_exists('page', $_GET) ) {
 
 //get the relative link of the current page for subdomains and subfolders to work properly in the nav
 $url =  "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
 $escaped_url = htmlspecialchars($url, ENT_QUOTES, 'UTF-8');
 $urlPath = parse_url($escaped_url);
 $urlPath = $urlPath['path'];
