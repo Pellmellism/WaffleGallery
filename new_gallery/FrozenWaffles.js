@@ -5,24 +5,34 @@ var elem = me.getAttribute( "kitchen" );
 //var currentLocation = "../";
 var currentLocation = '';
 
-var hotToaster = '<link rel="stylesheet" href="css/toaster.css" />';//pick the style of the toaster
+
+var hotToaster = '<link rel="stylesheet" href="toaster.css" />';//pick the style of the toaster
 hotToaster += '<div class=toaster><!--';//create the toaster
 
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791318346.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791335528.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791354328.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791354528.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791359146.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791368724.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791376502.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791386326.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791405306.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791409705.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14415791415129.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14418814309266.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14418817199815.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14418842805114.jpg"></div><!--'
-hotToaster += '--><div class="waffle hhhhh"><img src="'+currentLocation+'store/thumb/14419738264304.jpg"></div><!--'
+
+var beginning_img_tag = '--><div class="waffle hhhhh"><img src="'
+var end_img_tag = '"></div><!--'
+
+function addImg(imgName) {
+   var path = 'imgs/thumb/' + imgName;
+   //uncomment this for js-only version.
+   //return beginning_img_tag + path + end_img_tag;
+   return beginning_img_tag + imgName + end_img_tag;
+}
+
+/*var image_names = [
+   '14415791318346.jpg', '14415791318346.jpg', '14415791318346.jpg',
+   '14415791318346.jpg', '14415791335528.jpg', '14415791354328.jpg',
+   '14415791354528.jpg', '14415791359146.jpg', '14415791368724.jpg',
+   '14415791376502.jpg', '14415791386326.jpg', '14415791405306.jpg',
+   '14415791409705.jpg', '14415791415129.jpg', '14418814309266.jpg',
+   '14418817199815.jpg', '14418842805114.jpg', '14419738264304.jpg'
+];*/
+
+for (i in image_names) {
+   hotToaster += addImg(image_names[i]);
+}
+
 hotToaster += '--></div>';//close the toaster up and push it down
 
 document.getElementById(elem).innerHTML = hotToaster;//Put the toaster on the kitchen counter and plug it in
@@ -40,8 +50,8 @@ document.getElementById(elem).innerHTML = hotToaster;//Put the toaster on the ki
 		openWaffleDisplay();
 		
 		var img = x.firstChild.getAttribute('src');
-		img = img.replace("/thumb/","/original/");
-		biggestWaffle.setAttribute('src',img);
+		img = img.replace("/thumb/","/orig/");
+		biggestWaffle.setAttribute('src', img);
 		
 		//if height > width, then change css so height is 90vw and width is auto
 		
@@ -55,3 +65,5 @@ document.getElementById(elem).innerHTML = hotToaster;//Put the toaster on the ki
     }
 
 	(function() {waffleDisplayBG.style.display = 'none';BigWaffleHolder.style.display = 'none';})();
+
+

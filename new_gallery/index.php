@@ -16,6 +16,23 @@
 	###############################################################
 	############################################################### 
 	-->
+   <script>
+      var image_names = [];
+ 
+      <?php
+         $imgDirectory = 'imgs/thumb/';
+         $entries = scandir($imgDirectory);
+
+         //skip first 2 (. and ..)
+         for ($i = 2; $i < count($entries); ++$i) {
+            $filepath = $imgDirectory . $entries[$i];
+            echo 'image_names.push("' . $filepath . '");';
+         }
+      ?>
+   </script>
+
 	<script src="FrozenWaffles.js" kitchen="galleryDiv"></script>
+
+
 </body>
 </html>

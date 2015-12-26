@@ -1,0 +1,9 @@
+.toaster{width:100%;margin:0;padding:0}
+.waffle{display:inline-block;margin:0;padding:0;cursor:pointer}
+.waffle img{width:100%;box-sizing:border-box;padding:2px 4px;margin:0}
+.waffle img:hover{opacity: 0.4;filter: alpha(opacity=40)}
+@media (min-width: 70em) {.waffle{width:16.66666%}}
+@media (min-width: 50em) and (max-width: 70em){.waffle{width:25%}}
+@media (min-width: 30em) and (max-width: 50em){.waffle{width:33.33333%}}
+@media (min-width: 20em) and (max-width: 30em){.waffle{width:50%}}
+@media (min-width: 1em) and (max-width: 20em){.waffle{width:100%}}
