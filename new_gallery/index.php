@@ -7,10 +7,7 @@
 </head>
 <body>
 	<div style='width:30%; height:30%' id=galleryDiv></div>
-	
-	
-	
-	
+  <!-- #http://askubuntu.com/questions/135477/how-can-i-scale-all-images-in-a-folder-to-the-same-width -->
 	
 	<!-- 
 	###############################################################
@@ -20,6 +17,23 @@
 	###############################################################
 	############################################################### 
 	-->
-	<script src="js/FrozenWaffles.js" kitchen="galleryDiv"></script>
+   <script>
+      var image_names = [];
+ 
+      <?php
+         $imgDirectory = 'imgs/thumb/';
+         $entries = scandir($imgDirectory);
+
+         //skip first 2 (. and ..)
+         for ($i = 2; $i < count($entries); ++$i) {
+            $filepath = $imgDirectory . $entries[$i];
+            echo 'image_names.push("' . $filepath . '");';
+         }
+      ?>
+   </script>
+
+	<script src="FrozenWaffles.js" kitchen="galleryDiv"></script>
+
+
 </body>
 </html>
