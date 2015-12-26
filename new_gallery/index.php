@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div style='width:30%; height:30%' id=galleryDiv></div>
+  <!-- #http://askubuntu.com/questions/135477/how-can-i-scale-all-images-in-a-folder-to-the-same-width -->
 	
 	<!-- 
 	###############################################################
